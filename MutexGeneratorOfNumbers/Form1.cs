@@ -19,7 +19,7 @@ namespace MutexGeneratorOfNumbers
         {
             try
             {
-                uiContext.Send(d => label1.Text = "Начинаем генерировать числа!", null);
+                uiContext.Send(d => label1.Text = "Починаємо генерувати числа!", null);
                 FileStream file = new FileStream(@"c:/Temp/array.dat", FileMode.Create, FileAccess.Write);
                 BinaryWriter writer = new BinaryWriter(file);
                 int range = rnd.Next(1000);
@@ -30,7 +30,7 @@ namespace MutexGeneratorOfNumbers
                 }
                 writer.Close();
                 file.Close();
-                uiContext.Send(d => label1.Text = "Файл с числовыми данными создан!", null);
+                uiContext.Send(d => label1.Text = "Файл з числовими даними створений!", null);
             }
             catch (Exception e)
             {
@@ -42,7 +42,6 @@ namespace MutexGeneratorOfNumbers
             try
             {
                 bool CreatedNew;
-                // Создаём мьютекс
                 Mutex mutex = new Mutex(false, "F55491EF-4DDF-4126-BD5F-E8DD6C8AA00F", out CreatedNew);
                 mutex.WaitOne();
                 GeneratorOfNumbers();
@@ -50,7 +49,7 @@ namespace MutexGeneratorOfNumbers
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void button1_Click(object sender, EventArgs e)

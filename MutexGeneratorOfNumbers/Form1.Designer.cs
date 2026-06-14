@@ -39,7 +39,7 @@ namespace MutexGeneratorOfNumbers
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(237, 44);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Генерация чисел";
+            this.button1.Text = "Генерація чисел";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -61,7 +61,7 @@ namespace MutexGeneratorOfNumbers
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Мьютекс";
+            this.Text = "М'ютекс";
             this.ResumeLayout(false);
         }
 
